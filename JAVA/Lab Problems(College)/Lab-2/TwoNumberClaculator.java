@@ -17,7 +17,6 @@ public class TwoNumberClaculator {
 
         System.out.print("Enter the second number: ");
         double n2 = sc.nextDouble();
-        System.out.println("--------------------------------------------------------");
 
         double result;
         switch (operation) {
@@ -46,6 +45,7 @@ public class TwoNumberClaculator {
                 return;
         }
 
+        System.out.println("-------------------------------------------------------------");
         System.out.println("Result of " + n1 + " " + operation + " " + n2 + " is: " + result);
     }
 }

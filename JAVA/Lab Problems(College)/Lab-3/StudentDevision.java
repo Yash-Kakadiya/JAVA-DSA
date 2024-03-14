@@ -28,7 +28,6 @@ public class StudentDevision {
             }
             totalMarks += marks;
         }
-        System.out.println("-------------------------------------------------");
 
         double per = totalMarks / 5;
 
@@ -43,6 +42,7 @@ public class StudentDevision {
             div = "Fail";
         }
 
+        System.out.println("-------------------------------------------");
         System.out.println("Division obtained: " + div + " (" + per + "%)");
     }
 }

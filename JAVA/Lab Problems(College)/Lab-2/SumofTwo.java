@@ -15,6 +15,7 @@ public class SumofTwo {
         double n2 = sc.nextDouble();
 
         double sum = n1 + n2;
+        System.out.println("-----------------------------------------");
         System.out.println("Sum of " + n1 + " and " + n2 + " is: " + sum);
     }
 }
