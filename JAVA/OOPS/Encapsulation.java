@@ -2,12 +2,13 @@ package OOPS;
 public class Encapsulation {
 
     /*private and protected access modifiers are not allowed in front of class */
+
     public static void main(String[] args) {
 
         Student s1 = new Student(); // created a student object named s1
         s1.name = "Yash";
         s1.age = 19;
-        s1.calcPercentage(95, 90, 99);
+        s1.calcPercentage(97, 95, 99);
         System.out.println(s1.name);
         System.out.println(s1.age);
         System.out.println(s1.percentage);

@@ -1,4 +1,4 @@
-// Write a program to check that the given n is prime or not.
+// Write a program to check that the given number is prime or not.
 
 import java.util.Scanner;
 

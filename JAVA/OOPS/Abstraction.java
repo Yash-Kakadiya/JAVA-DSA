@@ -30,7 +30,7 @@ public class Abstraction {
         // Animal->Lion->Barbary
 
         System.out.println("--------------------------------");
-        
+
         // (ii)Interfaces
         Queen q = new Queen();
         q.moves();
@@ -39,9 +39,11 @@ public class Abstraction {
 
 /*
  * (i)Abstract Classes-> can be inherited using extends keyword
- * (a)Can't create an instance(object) of abstract class
- * (b)Can have abstarct/non-abstract methods
+ * (a)Can have abstarct/non-abstract methods
+ * (b)But, if a class has at least one abstract method, then the class must be
+ * declared abstract.
  * (c)Can have costructor
+ * (d)Can't create an instance(object) of abstract class
  */
 abstract class Animal {
     String color;
@@ -98,6 +100,7 @@ class Human extends Animal {
  * (b)all methods are public, abstract and without implementation
  * (c)used to achieve abstraction (default)
  * (d)variables in the interface are final, public and static (default)
+ * (e)can't have constructor
  */
 
 interface ChessPlayer {

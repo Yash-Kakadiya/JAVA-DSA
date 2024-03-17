@@ -1,5 +1,4 @@
-// Write a program to get 2 numbers from the user and print the sum of 
-// two numbers using command line and Scanner class.
+// Write a program to get 2 numbers from the user and print the sum of two numbers using command line and Scanner class.
 
 import java.util.Scanner;
 

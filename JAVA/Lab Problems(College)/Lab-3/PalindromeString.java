@@ -1,5 +1,4 @@
-// Write a program to find that given number or string is palindrome 
-// or not.
+// Write a program to find that given number or string is palindrome or not.
 
 import java.util.Scanner;
 

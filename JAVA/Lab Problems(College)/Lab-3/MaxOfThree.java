@@ -1,4 +1,4 @@
-// Write a program to find maximum no from given 3 no.
+// Write a program to find maximum number from given 3 numbers.
 
 import java.util.Scanner;
 
