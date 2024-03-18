@@ -1,6 +1,6 @@
 /*Create  a  class  named  Bank_Account  with  data  memebers  accountNo, 
-userName, email, accountType and accountBalance, Also create methods 
-setAccountDetails() and displayAccountDetails(). */
+    userName, email, accountType and accountBalance, Also create methods 
+    setAccountDetails() and displayAccountDetails(). */
 
 public class Bank_Account {
 

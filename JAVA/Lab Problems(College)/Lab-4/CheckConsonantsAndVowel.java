@@ -1,5 +1,5 @@
 /* Write a program to accept a l and check how many consonants and 
-vowels are there in line. */
+    vowels are there in line. */
 
 import java.util.Scanner;
 

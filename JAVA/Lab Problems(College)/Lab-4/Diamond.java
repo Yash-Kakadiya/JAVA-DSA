@@ -1,6 +1,6 @@
 /*Write an interactive program to print a diamond shape. For 
-example, if user enters the number 3, the diamond will be as 
-follows: 
+    example, if user enters the number 3, the diamond will be as 
+    follows: 
                         * 
                        * * 
                       * * * 

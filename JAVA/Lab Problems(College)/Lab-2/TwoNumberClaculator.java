@@ -1,4 +1,6 @@
-/* Write a program to create basic calculator by getting 2 numbers and 1 string(operation) from the user and apply the operation given in a string on the given numbers. */
+/* Write a program to create basic calculator by getting 2 numbers and 1 string
+    (operation) from the user and apply the operation given in a string on the given
+    numbers. */
 
 import java.util.Scanner;
 

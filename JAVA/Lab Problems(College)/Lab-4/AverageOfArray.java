@@ -1,5 +1,5 @@
 /*Write a program that creates and initializes a four integer 
-element array. Calculate and display the average of its values. */
+    element array. Calculate and display the average of its values. */
 
 public class AverageOfArray {
 

@@ -1,5 +1,5 @@
 /*Define Time class with constructor to initialize hour and minute. 
-Also define addition method to add two time objects. */
+    Also define addition method to add two time objects. */
 
 public class Time {
     int h;
