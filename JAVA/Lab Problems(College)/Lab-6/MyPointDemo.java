@@ -11,6 +11,23 @@
         point to another point with specified x- and y-coordinates.
  */
 
+public class MyPointDemo {
+
+    public static void main(String[] args) {
+
+        MyPoint p1 = new MyPoint(1, 2);
+        MyPoint p2 = new MyPoint(3, 4);
+
+        System.out.println("Point1: (" + p1.getX() + "," + p1.getY() + ")");
+        System.out.println("Point2: (" + p2.getX() + "," + p2.getY() + ")");
+
+        System.out.println("--------------------------------------------------------");
+        System.out.println("Distance between Point1 and Point2: " + p1.distance(p2));
+        System.out.println("--------------------------------------------------------");
+        System.out.println("Distance between Point1 and (5, 6): " + p1.distance(5, 6));
+    }
+}
+
 class MyPoint {
     private double x;
     private double y;
@@ -42,22 +59,5 @@ class MyPoint {
         double xD = this.x - x;
         double yD = this.y - y;
         return Math.sqrt((xD * xD) + (yD * yD));
-    }
-}
-
-public class MyPointDemo {
-
-    public static void main(String[] args) {
-
-        MyPoint p1 = new MyPoint(1, 2);
-        MyPoint p2 = new MyPoint(3, 4);
-
-        System.out.println("Point1: (" + p1.getX() + "," + p1.getY() + ")");
-        System.out.println("Point2: (" + p2.getX() + "," + p2.getY() + ")");
-
-        System.out.println("--------------------------------------------------------");
-        System.out.println("Distance between Point1 and Point2: " + p1.distance(p2));
-        System.out.println("--------------------------------------------------------");
-        System.out.println("Distance between Point1 and (5, 6): " + p1.distance(5, 6));
     }
 }

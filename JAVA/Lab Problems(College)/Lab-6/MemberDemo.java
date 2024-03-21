@@ -13,26 +13,6 @@
     by making an object of both of these classes and print the same 
     along with specialization and department respectively. */
 
-class Member {
-    String name;
-    int age;
-    String phoneNumber;
-    String address;
-    double salary;
-
-    public void printSalary() {
-        System.out.println("Salary: " + salary);
-    }
-}
-
-class Employee extends Member {
-    String specialization;
-}
-
-class Manager extends Member {
-    String department;
-}
-
 public class MemberDemo {
     public static void main(String[] args) {
 
@@ -72,4 +52,24 @@ public class MemberDemo {
         m.printSalary();
         System.out.println("Department: " + m.department);
     }
+}
+
+class Member {
+    String name;
+    int age;
+    String phoneNumber;
+    String address;
+    double salary;
+
+    public void printSalary() {
+        System.out.println("Salary: " + salary);
+    }
+}
+
+class Employee extends Member {
+    String specialization;
+}
+
+class Manager extends Member {
+    String department;
 }

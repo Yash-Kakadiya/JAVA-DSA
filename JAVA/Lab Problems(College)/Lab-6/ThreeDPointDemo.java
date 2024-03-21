@@ -11,6 +11,21 @@
         f.  Write a program that creates two points (0, 0, 0) and (10, 
             30, 25.5) and display the distance between the two points. */
 
+public class ThreeDPointDemo {
+
+    public static void main(String[] args) {
+
+        ThreeDPoint p1 = new ThreeDPoint();
+        ThreeDPoint p2 = new ThreeDPoint(10, 30, 25.5);
+
+        System.out.println("Point1: (" + p1.getX() + "," + p1.getY() + "," + p1.getZ() + ")");
+        System.out.println("--------------------------------------------------------");
+        System.out.println("Point2: (" + p2.getX() + "," + p2.getY() + "," + p2.getZ() + ")");
+        System.out.println("--------------------------------------------------------");
+        System.out.println("Distance between the two points: " + p1.distance(p2));
+    }
+}
+
 class MyPoint {
     private double x;
     private double y;
@@ -64,20 +79,5 @@ class ThreeDPoint extends MyPoint {
         double zD = this.z - p.getZ();
         return Math.sqrt(xD * xD + yD * yD + zD * zD);
 
-    }
-}
-
-public class ThreeDPointDemo {
-
-    public static void main(String[] args) {
-
-        ThreeDPoint p1 = new ThreeDPoint();
-        ThreeDPoint p2 = new ThreeDPoint(10, 30, 25.5);
-
-        System.out.println("Point1: (" + p1.getX() + "," + p1.getY() + "," + p1.getZ() + ")");
-        System.out.println("--------------------------------------------------------");
-        System.out.println("Point2: (" + p2.getX() + "," + p2.getY() + "," + p2.getZ() + ")");
-        System.out.println("--------------------------------------------------------");
-        System.out.println("Distance between the two points: " + p1.distance(p2));
     }
 }

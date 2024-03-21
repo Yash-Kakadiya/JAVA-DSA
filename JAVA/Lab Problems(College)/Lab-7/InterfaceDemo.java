@@ -4,6 +4,16 @@ and A2.Each interface declares one constant and one method. Class
 B implements A12.Instantiate B and invoke each of its methods. 
 Each method displays one of the constants */
 
+public class InterfaceDemo {
+    public static void main(String[] args) {
+        B b = new B();
+        b.methodA();
+        b.methodA1();
+        b.methodA2();
+        b.methodA12();
+    }
+}
+
 interface A {
     int constant_A = 0;
 
@@ -43,15 +53,5 @@ class B implements A12 {
 
     public void methodA12() {
         System.out.println("Method A12 implemented in class B with constant:" + constant_A12);
-    }
-}
-
-public class InterfaceDemo {
-    public static void main(String[] args) {
-        B b = new B();
-        b.methodA();
-        b.methodA1();
-        b.methodA2();
-        b.methodA12();
     }
 }

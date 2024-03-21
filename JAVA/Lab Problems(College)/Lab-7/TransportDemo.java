@@ -5,6 +5,18 @@ Camel and Donkey classes. Write a test program that initialize an
 array of four Animal objects. If the object implements the 
 Transport interface, the deliver () method is invoked. */
 
+public class TransportDemo {
+    public static void main(String[] args) {
+        Animal a[] = { new Tiger(), new Camel(), new Deer(), new Donkey() };
+
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] instanceof Transport) {
+                ((Transport) a[i]).deliver();
+            }
+        }
+    }
+}
+
 interface Transport {
     void deliver();
 }
@@ -32,17 +44,5 @@ class Donkey extends Animal implements Transport {
 
     public void deliver() {
         System.out.println("Donkey delivers.");
-    }
-}
-
-public class TransportDemo {
-    public static void main(String[] args) {
-        Animal a[] = { new Tiger(), new Camel(), new Deer(), new Donkey() };
-
-        for (int i = 0; i < a.length; i++) {
-            if (a[i] instanceof Transport) {
-                ((Transport) a[i]).deliver();
-            }
-        }
     }
 }

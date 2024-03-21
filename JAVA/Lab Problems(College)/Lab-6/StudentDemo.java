@@ -6,26 +6,6 @@
 
 import java.util.Scanner;
 
-class Student {
-    int id_No;
-    int no_of_subjects_registered;
-    String subject_code;
-    int subject_credits;
-    char grade_obtained;
-    double spi;
-
-    public Student() {
-        this.id_No = 0;
-        this.no_of_subjects_registered = 0;
-        this.spi = 0.0;
-    }
-
-    public void calculate_spi() {
-        // SPI Logic
-    }
-
-}
-
 public class StudentDemo {
 
     public static void main(String[] args) {
@@ -79,4 +59,24 @@ public class StudentDemo {
             System.out.println("--------------------------------------------------");
         }
     }
+}
+
+class Student {
+    int id_No;
+    int no_of_subjects_registered;
+    String subject_code;
+    int subject_credits;
+    char grade_obtained;
+    double spi;
+
+    public Student() {
+        this.id_No = 0;
+        this.no_of_subjects_registered = 0;
+        this.spi = 0.0;
+    }
+
+    public void calculate_spi() {
+        // SPI Logic
+    }
+
 }

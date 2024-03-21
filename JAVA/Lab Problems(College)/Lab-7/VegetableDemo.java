@@ -6,6 +6,19 @@ display instances of these objects. Override the toString() method
 of object to return a string with the name of vegetable and its 
 color. */
 
+public class VegetableDemo {
+    public static void main(String[] args) {
+
+        Potato potato = new Potato("Brown");
+        Brinjal brinjal = new Brinjal("Purple");
+        Tomato tomato = new Tomato("Red");
+
+        System.out.println(potato);
+        System.out.println(brinjal);
+        System.out.println(tomato);
+    }
+}
+
 abstract class Vegetable {
     String color;
 
@@ -43,18 +56,5 @@ class Tomato extends Vegetable {
 
     public String toString() {
         return "Tomato (Color: " + color + ")";
-    }
-}
-
-public class VegetableDemo {
-    public static void main(String[] args) {
-
-        Potato potato = new Potato("Brown");
-        Brinjal brinjal = new Brinjal("Purple");
-        Tomato tomato = new Tomato("Red");
-
-        System.out.println(potato);
-        System.out.println(brinjal);
-        System.out.println(tomato);
     }
 }

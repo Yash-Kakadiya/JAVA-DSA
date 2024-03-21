@@ -7,6 +7,23 @@
     MouseListener and KeyListener and demonstrate all the methods of 
     the interfaces. */
 
+public class EventListenerDemo {
+    public static void main(String[] args) {
+        EventDemo eventDemo = new EventDemo();
+
+        eventDemo.mouseClicked();
+        eventDemo.mousePressed();
+        eventDemo.mouseReleased();
+        eventDemo.mouseMoved();
+        eventDemo.mouseDragged();
+
+        eventDemo.keyPressed();
+        eventDemo.keyReleased();
+
+        eventDemo.performEvent();
+    }
+}
+
 interface EventListener {
     void performEvent();
 }
@@ -61,22 +78,5 @@ class EventDemo implements MouseListener, KeyListener {
 
     public void performEvent() {
         System.out.println("Performing Event");
-    }
-}
-
-public class EventListenerDemo {
-    public static void main(String[] args) {
-        EventDemo eventDemo = new EventDemo();
-
-        eventDemo.mouseClicked();
-        eventDemo.mousePressed();
-        eventDemo.mouseReleased();
-        eventDemo.mouseMoved();
-        eventDemo.mouseDragged();
-
-        eventDemo.keyPressed();
-        eventDemo.keyReleased();
-
-        eventDemo.performEvent();
     }
 }

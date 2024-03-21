@@ -1,5 +1,14 @@
 /*Demonstrate the use of Super Keyword. */
 
+public class SuperDemo {
+
+    public static void main(int[] args) {
+
+        Dog myDog = new Dog(4, "Jerman Shephard");
+        myDog.display();
+    }
+}
+
 class Animal {
     int leg;
 
@@ -8,7 +17,7 @@ class Animal {
     }
 
     public void walk() {
-        System.out.println("Walk with "+leg+" Legs");
+        System.out.println("Walk with " + leg + " Legs");
     }
 }
 
@@ -21,17 +30,8 @@ class Dog extends Animal {
     }
 
     public void display() {
-        System.out.print("Legs: "+leg);
+        System.out.print("Legs: " + leg);
         System.out.println("Breed: " + breed);
         super.walk();
-    }
-}
-
-public class SuperDemo {
-
-    public static void main(int[] args) {
-
-        Dog myDog = new Dog(4, "Jerman Shephard");
-        myDog.display();
     }
 }

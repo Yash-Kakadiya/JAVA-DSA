@@ -5,6 +5,24 @@
     usage of dynamic method dispatch (dynamic polymorphism) to 
     display book or paper publications of given author. */
 
+public class BookDemo {
+    public static void main(String[] args) {
+        book_publication b1 = new book_publication("Tony Stark", "Book 1");
+        paper_publication p1 = new paper_publication("Peter Parkar", "Paper 1");
+
+        Book book1 = b1;
+        Book book2 = p1;
+
+        System.out.println("Displaying book publication:");
+        book1.display();
+        System.out.println("----------------------------------");
+
+        System.out.println("\nDisplaying paper publication:");
+        book2.display();
+        System.out.println("----------------------------------");
+    }
+}
+
 class Book {
     private String author_name;
 
@@ -42,23 +60,5 @@ class paper_publication extends Book {
     public void display() {
         super.display();
         System.out.println("Title: " + title);
-    }
-}
-
-public class BookDemo {
-    public static void main(String[] args) {
-        book_publication b1 = new book_publication("Tony Stark", "Book 1");
-        paper_publication p1 = new paper_publication("Peter Parkar", "Paper 1");
-
-        Book book1 = b1;
-        Book book2 = p1;
-
-        System.out.println("Displaying book publication:");
-        book1.display();
-        System.out.println("----------------------------------");
-
-        System.out.println("\nDisplaying paper publication:");
-        book2.display();
-        System.out.println("----------------------------------");
     }
 }

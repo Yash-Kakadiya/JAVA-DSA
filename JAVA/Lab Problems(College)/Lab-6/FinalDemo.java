@@ -1,4 +1,14 @@
 /*Demonstrate the use of Final Keyword.  */
+
+public class FinalDemo {
+
+    public static void main(String[] args) {
+
+        Final obj = new Final();
+        obj.finalMethod();
+    }
+}
+
 final class Final {
     final int n = 7;
 
@@ -13,12 +23,3 @@ final class Final {
 }
 
 // class SubClass extends Final { }
-
-public class FinalDemo {
-
-    public static void main(String[] args) {
-
-        Final obj = new Final();
-        obj.finalMethod();
-    }
-}

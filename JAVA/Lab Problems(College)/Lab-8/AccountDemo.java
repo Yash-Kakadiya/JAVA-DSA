@@ -4,6 +4,23 @@
     InSufficientFundException  to  handle  above  situation  and  display 
     proper error message. */
 
+public class AccountDemo {
+    public static void main(String[] args) {
+        Account a1 = new Account(10000);
+
+        try {
+            a1.deposit(5000);
+            a1.withdraw(3000);
+            a1.withdraw(15000);
+        } catch (InsufficientFundException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+
+        System.out.println("-----------------------------------------------------------------");
+        System.out.println("Current Balance: Rs." + a1.getBalance());
+    }
+}
+
 class InsufficientFundException extends Exception {
     public InsufficientFundException(String message) {
         super(message);
@@ -32,22 +49,5 @@ class Account {
         }
         balance -= amount;
         System.out.println("You Withdraws: Rs." + amount);
-    }
-}
-
-public class AccountDemo {
-    public static void main(String[] args) {
-        Account a1 = new Account(10000);
-
-        try {
-            a1.deposit(5000);
-            a1.withdraw(3000);
-            a1.withdraw(15000);
-        } catch (InsufficientFundException e) {
-            System.out.println("Error: " + e.getMessage());
-        }
-
-        System.out.println("-----------------------------------------------------------------");
-        System.out.println("Current Balance: Rs." + a1.getBalance());
     }
 }
