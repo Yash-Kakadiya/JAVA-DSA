@@ -23,7 +23,7 @@ class OddThread extends Thread {
             System.out.println("Odd Thread: " + i);
 
             try {
-                Thread.sleep(700);
+                sleep(700);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -41,7 +41,7 @@ class EvenThread extends Thread {
             System.out.println("Even Thread: " + i);
 
             try {
-                Thread.sleep(700); // Sleep for 500 milliseconds
+                sleep(700);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

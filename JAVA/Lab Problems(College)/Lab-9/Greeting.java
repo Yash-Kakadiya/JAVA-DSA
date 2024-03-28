@@ -1,6 +1,6 @@
 /*Write an application that executes two threads. One thread 
     displays "Good Morning" every 1000 milliseconds & another thread 
-    displays "Good Afternoon" every 3000      milliseconds. Create the 
+    displays "Good Afternoon" every 3000 milliseconds. Create the 
     threads by implementing the Runnable interface. */
 
 public class Greeting {

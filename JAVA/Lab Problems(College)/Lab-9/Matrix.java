@@ -2,7 +2,7 @@
     a.  Read matrix [A] m x n 
     b.  Create m number of threads 
     c.  Each thread computes summation of elements of one row, i.e. 
-        ith row of the matrix is processed by ith thread. Where 0 <= i< m. 
+        ith row of the matrix is processed by ith thread. Where 0<=i<m. 
     d.  Print the results.  */
 
 import java.util.Scanner;
@@ -31,6 +31,7 @@ public class Matrix extends Thread {
     }
 
     public static void main(String[] args) {
+        
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter the number of rows (m): ");
