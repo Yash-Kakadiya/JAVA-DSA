@@ -32,9 +32,9 @@ public class Count {
             fileReader.close();
             bufferedReader.close();
         } catch (FileNotFoundException e) {
-            System.err.println("File not found !" + filename);
+            System.out.println("File not found !" + filename);
         } catch (IOException e) {
-            System.err.println("Error reading the file: " + e.getMessage());
+            System.out.println("Error reading the file: " + e.getMessage());
         }
     }
 }
