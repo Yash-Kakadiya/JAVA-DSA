@@ -29,10 +29,10 @@ public class CountOccurrences {
             reader.close();
             System.out.println("Number of occurrences of digit 7: " + count);
         } catch (FileNotFoundException fne) {
-            System.err.println("File not found !");
+            System.out.println("File not found !");
             fne.printStackTrace();
         } catch (IOException e) {
-            System.err.println("Error reading the file: " + e.getMessage());
+            System.out.println("Error reading the file: " + e.getMessage());
         }
     }
 }
