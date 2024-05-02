@@ -6,8 +6,8 @@ public class UpperCase {
 
     public static void main(String[] args) {
 
-        String str = args[0];
-        char ch = str.charAt(0);
+        // String str = args[0];
+        char ch = args[0].charAt(0);
 
         System.out.println("-----------------------------------------------------------");
         if (!(ch >= 'A' && ch <= 'Z')) {

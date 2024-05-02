@@ -10,7 +10,7 @@ public class Circle {
         this.radius = radius;
     }
 
-    public double Area() {
+    public double area() {
         return Math.PI * radius * radius;
     }
 
@@ -21,6 +21,6 @@ public class Circle {
         Circle circle = new Circle(sc.nextInt());
 
         System.out.println("----------------------------------------------------------");
-        System.out.println("Area of the circle with radius " + circle.radius + " is: " + circle.Area());
+        System.out.println("Area of the circle with radius " + circle.radius + " is: " + circle.area());
     }
 }

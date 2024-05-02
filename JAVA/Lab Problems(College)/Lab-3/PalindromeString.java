@@ -25,8 +25,5 @@ public class PalindromeString {
         } else {
             System.out.println(input + " is not a palindrome.");
         }
-
-        // Close the Scanner object to free up resources
-        sc.close();
     }
 }
