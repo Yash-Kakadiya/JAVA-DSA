@@ -1,29 +1,30 @@
 import java.util.*;
 
-public class DataTypesJava{
-    public static void main(String args[]){
+public class DataTypesJava {
+    public static void main(String args[]) {
 
-        //data types
-        byte y= 8;
+        // data types
+        byte y = 8;
         System.out.println(y);
 
-        char c= 'a';
+        char c = 'a';
         System.out.println(c);
 
-        boolean var= false;
+        short x = 240;
+        System.out.println(x);
+        
+        boolean var = false;
         System.out.println(var);
 
-        int num= 77;
+        int num = 77;
         System.out.println(num);
-        //long
+        // long
 
-        float pi= 3;
+        float pi = 3;
         System.out.println(pi);
-        //double
+        // double
 
-        short x= 240;
-        System.out.println(x);
         System.out.println("---------------------");
-     
+
     }
 }
