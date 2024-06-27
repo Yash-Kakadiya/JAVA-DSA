@@ -1,23 +1,27 @@
-import java.util.*;
+//10. WAP to convert number of days into year, week & days [e.g. 375 days mean 1 year, 1 week and 3 days].
+
+import java.util.Scanner;
+
 public class ConvertDays {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
 
-        System.out.println("Enter the Days:");
-        int day=sc.nextInt();
-        int week=0,year=0;
+        Scanner sc = new Scanner(System.in);
 
-        while (day>=7) {
-            week++;
-            day-=7;
-        }
-        while (week>=(52)) {
-            year++;
-            week-=(52);
-        }
+        System.out.print("Enter number of Days:");
+        
+        int d = sc.nextInt();
 
-        System.out.println(year+" years,"+week+" weeks,"+day+" days");
+        int w = 0, y = 0;
+
+        w = d / 7;
+        d %= 7;
+        
+        y = w / 52;
+        w %= 52;
+
+        System.out.println(y+" years, "+w+" weeks, "+d+" days");
+        
         sc.close();
     }
-    
+
 }

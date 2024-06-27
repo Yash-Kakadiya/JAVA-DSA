@@ -1,19 +1,26 @@
-import java.util.*;
+//6. Write a program to find power of a number using loop.
+
+import java.util.Scanner;
+
 public class Power {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter the base:");
-        int n=sc.nextInt();
-        System.out.println("Enter the power:");
-        int p=sc.nextInt();
-        double power=1;
+        
+        Scanner sc = new Scanner(System.in);
 
-        for(int i=1;i<=p;i++){
-            power*=n;
+        System.out.print("Enter the base(x) to find x^y: ");
+        int x = sc.nextInt();
+
+        System.out.print("Enter the power(y) to find x^y: ");
+        int y = sc.nextInt();
+
+        double ans = 1;
+
+        for (int i = 1; i <= y; i++) {
+            ans *= x;
         }
 
-        System.out.println(power);
+        System.out.println(x + "^" + y + " = " + ans);
         sc.close();
     }
-    
+
 }
