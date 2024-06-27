@@ -1,54 +1,52 @@
-import java.util.*;
+//18. Read  n  numbers  in  an  array  then  read  two  different  numbers,  replace  1st number with 2nd number in an array and print its index and final array.
+
+import java.util.Scanner;
+
 public class Replace {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a size of an array : ");
-        int n = sc.nextInt();
-        int[] array = new int[n];
 
-        System.out.println("Enter an Elements : ");
-        for(int i=0 ; i<n; i++){
-            array[i] = sc.nextInt();
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter size of array : ");
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            System.out.print("Enter element at index " + i + " : ");
+            arr[i] = sc.nextInt();
         }
 
-        System.out.println("Enter first number :");
+        System.out.print("Enter new value to replace : ");
         int a = sc.nextInt();
-        System.out.println("Enter second number : ");
+
+        System.out.print("Enter old number to replace : ");
         int b = sc.nextInt();
 
-        int indexOfa=0;
-        int indexOfb=0;
-        int check=1;
+        int idx = -1;
 
-        for(int i=0; i<array.length; i++){
-            if(a==array[i]){
-                indexOfa=i;
-            }else{
-                check=0;
-            }
-           
-        }
-
-        for(int i=0; i<array.length; i++){
-            if(b==array[i]){
-                indexOfb=i;
-            }else{
-                check=0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == b) {
+                idx = i;
+                arr[i] = a;
+                break;
             }
         }
 
-        if(check==0){
-            System.out.println("Error..");
-        }else{
-            int temp=array[indexOfa];
-            array[indexOfa]=array[indexOfb];
-            array[indexOfb]=temp;
+        System.out.println("--------------------------------------------------------");
 
-            for(int i=0; i<n ;i++){
-                System.out.print(array[i] + " ");
-            }
+        if (idx != -1) {
+            System.out.println("Number " + b + " replaced at index " + idx);
+        } else {
+            System.out.println("Number " + b + " not found in array.");
         }
-           
+
+        System.out.println("Array after replacement.");
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+
         sc.close();
     }
 }
