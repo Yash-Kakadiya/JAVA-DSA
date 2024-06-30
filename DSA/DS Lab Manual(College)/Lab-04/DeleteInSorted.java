@@ -1,47 +1,55 @@
-import java.util.*;
+//24. Write a program to delete a number from an array that is already sorted in an ascending order.
+
+import java.util.Scanner;
+
 public class DeleteInSorted {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter the element:");
-        int element=sc.nextInt();
 
-        int Array[]={1,2,4,5,6};
+        Scanner sc = new Scanner(System.in);
 
-        int NewArray[]=new int[Array.length-1];
-        int j=0;
-        int index=0;
-        int check=1;
+        int arr[] = { 1, 2, 4, 5, 6 };
 
-        for(int i=0; i<Array.length; i++){
-            if(element==Array[i]){
-                index=i;
-            }else{
-                check=0;
-                System.out.println("Invalid Value.!");
+        System.out.println("Old array :");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println("Array[" + i + "] :  " + arr[i]);
+        }
+        System.out.println("--------------------------------");
+
+        System.out.print("Enter the number : ");
+        int num = sc.nextInt();
+
+        int newArr[] = new int[arr.length - 1];
+        int idx = -1;
+        int j = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (num == arr[i]) {
+                idx = i;
                 break;
+            } else if (i == arr.length - 1) {
+                System.out.println("Given number is not in array !");
+                sc.close();
+                return;
             }
         }
 
-        for(int i=0; i<index; i++){
-            NewArray[j]=Array[i];
+        for (int i = 0; i < idx; i++) {
+            newArr[j] = arr[i];
             j++;
         }
-        for(int i=index+1; i<Array.length; i++){
-            NewArray[j]=Array[i];
+
+        for (int i = idx + 1; i < arr.length; i++) {
+            newArr[j] = arr[i];
             j++;
         }
 
         System.out.println("-------------------------------");
-        if(check==1){
-            for(j=0; j<NewArray.length; j++)
-            { 
-                System.out.println(NewArray[j]);
-            }
-        }else{
-            System.out.println("Error..");
+        System.out.println("New array after deleting " + num + " :");
+        for (int i = 0; i < newArr.length; i++) {
+            System.out.println("New array[" + i + "] :  " + newArr[i]);
         }
 
         sc.close();
     }
-    
+
 }
