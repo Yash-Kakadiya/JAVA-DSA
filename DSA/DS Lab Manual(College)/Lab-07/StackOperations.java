@@ -5,12 +5,12 @@
 
 import java.util.Scanner;
 
-class Stack {
+class StackOp {
     int top = -1;
     int n;
     int[] S;
 
-    public Stack(int n) {
+    public StackOp(int n) {
         this.n = n;
         S = new int[n];
     }
@@ -62,17 +62,20 @@ class Stack {
             System.out.println(S[i]);
         }
     }
+
 }
 
 public class StackOperations {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter size of Stack : ");
         int n = sc.nextInt();
-        Stack s1 = new Stack(n);
+        StackOp s1 = new StackOp(n);
 
         while (true) {
+            System.out.println("--------------------------------");
             System.out.println("Stack operations.");
             System.out.println("1. to push element.");
             System.out.println("2. to pop element.");
@@ -86,7 +89,7 @@ public class StackOperations {
 
             switch (op) {
                 case 1:
-                    System.out.print("Enter value to push :");
+                    System.out.print("Enter value to push : ");
                     int x = sc.nextInt();
                     s1.push(x);
                     break;
@@ -94,28 +97,27 @@ public class StackOperations {
                     System.out.println(s1.pop());
                     break;
                 case 3:
-                    System.out.print("Enter value of ith to peep element :");
+                    System.out.print("Enter value of nth element to peep element : ");
                     int i = sc.nextInt();
-                    s1.peep(i);
+                    System.out.println(s1.peep(i));
                     break;
                 case 4:
-                    System.out.print("Enter value to be change :");
+                    System.out.print("Enter value to be change : ");
                     int x1 = sc.nextInt();
-                    System.out.print("Enter ith index to be change :");
+                    System.out.print("Enter nth element to be change : ");
                     int i1 = sc.nextInt();
                     s1.change(i1, x1);
                     break;
                 case 5:
-                    System.out.println("Stack :");
+                    System.out.println("Stack : ");
                     s1.display();
                     break;
-
                 default:
                     System.out.println("Exiting...");
                     sc.close();
                     return;
             }
-            sc.close();
+
         }
     }
 }
