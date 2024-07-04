@@ -45,13 +45,13 @@ public class LinkedList {
     }
 
     public void add(int idx, int data) {
-        if (idx == 0) {
+        if (idx == 0) {  // starting index: 0 || start index:1
             addFirst(data);
             return;
         }
         Node newNode = new Node(data);
         Node temp = head;
-        int i = 0;
+        int i = 0; // starting index: 0 || start index:1
 
         while (i < idx - 1) {
             temp = temp.next;
