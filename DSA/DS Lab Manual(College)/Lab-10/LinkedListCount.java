@@ -4,7 +4,7 @@
 
 public class LinkedListCount {
     // Node blueprint
-    public static class Node {
+    public  class Node {
         int data;
         Node next;
 
@@ -15,7 +15,7 @@ public class LinkedListCount {
         }
     }
 
-    public static Node head;
+    public Node head;
     public static int count;
 
     public void addLast(int data) {

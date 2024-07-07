@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class LinkedListMenu {
 
     // Node blueprint
-    public static class Node {
+    public class Node {
         int data;
         Node next;
 
@@ -23,7 +23,7 @@ public class LinkedListMenu {
         }
     }
 
-    public static Node head;
+    public Node head;
 
     public void addFirst(int data) {
         Node newNode = new Node(data);
