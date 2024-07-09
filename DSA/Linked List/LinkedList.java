@@ -11,9 +11,9 @@ public class LinkedList {
         }
     }
 
-    public static Node head;
+    public Node head;
     public Node tail;
-    public static int size;
+    public int size;
 
     public void addFirst(int data) {
         Node newNode = new Node(data);
@@ -209,7 +209,7 @@ public class LinkedList {
         return true;
     }
 
-    public static boolean isCycle() {
+    public boolean isCycle() {
         Node slow = head;
         Node fast = head;
         while (fast != null && fast.next != null) {
@@ -222,7 +222,7 @@ public class LinkedList {
         return false;
     }
 
-    public static void removeCycle() {
+    public void removeCycle() {
         Node slow = head;
         Node fast = head;
         boolean cycle = false;
@@ -248,55 +248,116 @@ public class LinkedList {
 
     }
 
+    private Node getMid(Node head) {
+        Node slow = head;
+        Node fast = head.next;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+
+    private Node merge(Node head1, Node head2) {
+        Node mergedLL = new Node(-1);
+        Node temp = mergedLL;
+
+        while (head1 != null && head2 != null) {
+            if (head1.data <= head2.data) {
+                temp.next = head1;
+                head1 = head1.next;
+                temp = temp.next;
+            } else {
+                temp.next = head2;
+                head2 = head2.next;
+                temp = temp.next;
+            }
+        }
+        while (head1 != null) {
+            temp.next = head1;
+            head1 = head1.next;
+            temp = temp.next;
+        }
+        while (head2 != null) {
+            temp.next = head2;
+            head2 = head2.next;
+            temp = temp.next;
+        }
+        return mergedLL.next;
+    }
+
+    public Node mergeSort(Node head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        Node mid = getMid(head);
+        Node rightHead = mid.next;
+        mid.next = null;
+        Node newLeft = mergeSort(head);
+        Node newRight = mergeSort(rightHead);
+
+        return merge(newLeft, newRight);
+    }
+
     public static void main(String[] args) {
-        // LinkedList li = new LinkedList();
+        LinkedList li = new LinkedList();
 
-        // li.addFirst(2);
-        // li.addFirst(1);
-        // li.addLast(3);
-        // li.addLast(4);
-        // li.add(1, 5);
-        // li.printList();
-        // System.out.println(li.size);
+        li.addFirst(2);
+        li.addFirst(1);
+        li.addLast(3);
+        li.addLast(4);
+        li.add(1, 5);
+        li.printList();
+        System.out.println(li.size);
 
-        // li.deleteFirst();
-        // li.printList();
-        // System.out.println(li.size);
+        li.deleteFirst();
+        li.printList();
+        System.out.println(li.size);
 
-        // li.deleteLast();
-        // li.printList();
-        // System.out.println(li.size);
+        li.deleteLast();
+        li.printList();
+        System.out.println(li.size);
 
-        // System.out.println(li.itrSearch(3)); // returns index 2
-        // System.out.println(li.itrSearch(6)); // returns -1
+        System.out.println(li.itrSearch(3)); // returns index 2
+        System.out.println(li.itrSearch(6)); // returns -1
 
-        // System.out.println(li.recSearch(3)); // returns index 2
-        // System.out.println(li.recSearch(6)); // returns -1
+        System.out.println(li.recSearch(3)); // returns index 2
+        System.out.println(li.recSearch(6)); // returns -1
 
-        // li.reverse();
-        // li.printList();
+        li.reverse();
+        li.printList();
 
-        // li.deleteNthFromEnd(2);
-        // li.printList();
+        li.deleteNthFromEnd(2);
+        li.printList();
 
-        // LinkedList li2 = new LinkedList();
-        // li2.addLast(1);
-        // li2.addLast(2);
-        // li2.addLast(2);
-        // li2.addLast(1);
-        // li2.printList();
-        // System.out.println(li2.checkPalindrome()); // true
+        LinkedList li2 = new LinkedList();
+        li2.addLast(1);
+        li2.addLast(2);
+        li2.addLast(2);
+        li2.addLast(1);
+        li2.printList();
+        System.out.println(li2.checkPalindrome()); // true
 
-        head = new Node(1);
-        Node temp = new Node(2);
-        head.next = temp;
-        head.next.next = new Node(3);
-        head.next.next.next = temp;
-        System.out.println(isCycle());
+        // head = new Node(1);
+        // Node temp = new Node(2);
+        // head.next = temp;
+        // head.next.next = new Node(3);
+        // head.next.next.next = temp;
+        // System.out.println(isCycle());
 
-        removeCycle();
-        System.out.println(isCycle()); // false
-        // li2.printList();
+        // removeCycle();
+        // System.out.println(isCycle()); // false
+
+        LinkedList li3 = new LinkedList();
+        li3.addFirst(1);
+        li3.addFirst(2);
+        li3.addFirst(3);
+        li3.addFirst(4);
+
+        li3.printList();
+        li3.head = li3.mergeSort(li3.head);
+        li3.printList();
 
     }
 }
