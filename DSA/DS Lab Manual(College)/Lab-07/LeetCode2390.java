@@ -1,3 +1,6 @@
+//Lab-07 -> 42 Alternate : LeetCode : 2390
+// Link : https://leetcode.com/problems/removing-stars-from-a-string
+
 import java.util.Stack;
 
 public class LeetCode2390 {
