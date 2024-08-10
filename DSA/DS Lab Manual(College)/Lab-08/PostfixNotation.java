@@ -50,6 +50,7 @@ public class PostfixNotation {
         }
 
         System.out.println(polish.toString());
+        sc.close();
     }
 
     public static int infixPrecedence(char c) {

@@ -148,12 +148,6 @@ class DoublyLinkedList {
         temp.next = null;
     }
 
-    void deleteAtlernate(){
-        Node temp=first;
-        while (temp.next!=null) {
-            deleteAtAddress(temp.next);
-            System.out.println("ok");
-            temp=temp.next.next;
-        }
+    void deleteAtlernate() {
     }
 }
