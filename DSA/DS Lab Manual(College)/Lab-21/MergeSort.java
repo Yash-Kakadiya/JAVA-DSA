@@ -52,6 +52,7 @@ public class MergeSort {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
+        System.out.println();
     }
 
     public static void main(String[] args) {
@@ -59,7 +60,6 @@ public class MergeSort {
 
         System.out.println("Before");
         display(arr);
-        System.out.println();
 
         sort(arr);
 

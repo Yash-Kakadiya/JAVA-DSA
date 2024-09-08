@@ -11,9 +11,11 @@ public class SelectionSort {
                     minIdx = j;
                 }
             }
-            int temp = arr[i];
-            arr[i] = arr[minIdx];
-            arr[minIdx] = temp;
+            if (minIdx != i) {
+                int temp = arr[i];
+                arr[i] = arr[minIdx];
+                arr[minIdx] = temp;
+            }
         }
     }
 
@@ -21,6 +23,7 @@ public class SelectionSort {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
+        System.out.println();
     }
 
     public static void main(String[] args) {
@@ -28,7 +31,6 @@ public class SelectionSort {
 
         System.out.println("Before");
         display(arr);
-        System.out.println();
 
         sort(arr);
 

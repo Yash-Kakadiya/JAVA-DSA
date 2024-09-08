@@ -11,7 +11,7 @@ public class BinarySearch {
             middle = (left + right) / 2;
             if (arr[middle] == key) {
                 return middle;
-            } else if (arr[middle] < key) {
+            } else if (key > arr[middle]) {
                 left = middle + 1;
             } else {
                 right = middle - 1;
@@ -24,8 +24,7 @@ public class BinarySearch {
         int left = 0;
         int right = arr.length - 1;
 
-        int idx = searchRecFn(arr, key, left, right);
-        return idx;
+        return searchRecFn(arr, key, left, right);
     }
 
     public static int searchRecFn(int[] arr, int key, int left, int right) {
@@ -33,7 +32,7 @@ public class BinarySearch {
             int middle = (left + right) / 2;
             if (arr[middle] == key) {
                 return middle;
-            } else if (arr[middle] < key) {
+            } else if (key > arr[middle]) {
                 return searchRecFn(arr, key, middle + 1, right);
             } else {
                 return searchRecFn(arr, key, left, middle - 1);
@@ -49,15 +48,11 @@ public class BinarySearch {
         int idx = searchItr(arr, key);
         int idx2 = searchRec(arr, key);
 
-        if (idx != -1) {
+        if (idx != -1 && idx2 != -1) {
             System.out.println("Key " + key + " found at index " + idx + " using iterative approach.");
-        } else {
-            System.out.println("Key " + key + " not found  using iterative approach.");
-        }
-        if (idx2 != -1) {
             System.out.println("Key " + key + " found at index " + idx + " using recursive approach.");
         } else {
-            System.out.println("Key " + key + " not found using recursive approach.");
+            System.out.println("Key " + key + " not found.");
         }
     }
 }

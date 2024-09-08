@@ -2,7 +2,7 @@
  * 90. Write a program to implement a Linear Search using Array.
  */
 
-//  LEETCODE 42-2390 , 49- 155, 55 - 1700, 81 - 110, 100- 75
+//  LEETCODE 42<->2390 , 49<->155, 55<->1700, 81<->110, 100<->75
 
 public class LinearSearch {
     public static int search(int[] arr, int key) {
