@@ -1,5 +1,7 @@
 /*
  * 91. Write a program to implement a Binary Search using Array.
+ * Time Complexity:  Ω(1), θ(log n), O(log n).
+ * Space Complexity: O(1), O(log n) ( for recursive version).
  */
 
 public class BinarySearch {

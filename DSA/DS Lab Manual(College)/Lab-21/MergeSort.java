@@ -1,5 +1,7 @@
 /*
  * 96. Write a program to implement Merge Sort using Array.
+ * Time Complexity:  Ω(nlog n), θ(nlog n), O(nlog n).
+ * Space Complexity: O(n).
  */
 
 public class MergeSort {
@@ -24,6 +26,7 @@ public class MergeSort {
         int[] localArr = new int[high + 1];
         int leftIdx = low, rigthIdx = mid + 1, localI = low;
 
+        // merge two arrays
         while (leftIdx <= mid && rigthIdx <= high) {
             if (arr[leftIdx] <= arr[rigthIdx]) {
                 localArr[localI] = arr[leftIdx++];
@@ -33,16 +36,19 @@ public class MergeSort {
             localI++;
         }
 
+        // Copy remaining elements of right array, if any
         if (leftIdx > mid) {
             for (int k = rigthIdx; k <= high; k++) {
                 localArr[localI++] = arr[k];
             }
         } else {
+            // Copy remaining elements of left array, if any
             for (int k = leftIdx; k <= mid; k++) {
                 localArr[localI++] = arr[k];
             }
         }
 
+        // Copy the sorted elements to original array
         for (int i = low; i <= high; i++) {
             arr[i] = localArr[i];
         }

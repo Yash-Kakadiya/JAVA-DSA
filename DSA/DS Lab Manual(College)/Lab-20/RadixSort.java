@@ -1,4 +1,7 @@
-// 95. Write a program to implement Radix Sort using Array.(Element must be positive integer).
+/*  95. Write a program to implement Radix Sort using Array.(Element must be positive integer).
+* Time Complexity:  Ω(d*(n+k)), θ(d*(n+k)), O(d*(n+k)).
+* Space Complexity: O(n+k).
+*/
 
 public class RadixSort {
     public static void sort(int[] arr) {
@@ -20,19 +23,29 @@ public class RadixSort {
 
     public static void countSort(int[] arr, int place) {
         int output[] = new int[arr.length];
-        int count[] = new int[10];
+        int count[] = new int[10]; // decimal
 
-        for (int i = 0; i < output.length; i++) {
+        // Initialize count array(Optional for java) mnv
+        // for (int i = 0; i < count.length; i++) {
+        //     count[i] = 0;
+        // }
+
+        // Find frequence of elements
+        for (int i = 0; i < arr.length; i++) {
             count[(arr[i] / place) % 10]++;
         }
 
+        // Cummulative sum
         for (int i = 1; i < count.length; i++) {
             count[i] += count[i - 1];
         }
 
-        for (int i = 0; i < output.length; i++) {
+        // Build output array
+        for (int i = arr.length - 1; i >= 0; i--) {
             output[--count[(arr[i] / place) % 10]] = arr[i];
         }
+
+        // Copy output array to orignal array
         for (int i = 0; i < output.length; i++) {
             arr[i] = output[i];
         }

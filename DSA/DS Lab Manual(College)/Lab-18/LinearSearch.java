@@ -1,5 +1,7 @@
 /*
  * 90. Write a program to implement a Linear Search using Array.
+ * Time Complexity:  Ω(1), θ(n), O(n).
+ * Space Complexity: O(1).
  */
 
 //  LEETCODE 42<->2390 , 49<->155, 55<->1700, 81<->110, 100<->75

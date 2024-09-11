@@ -1,5 +1,7 @@
 /*
  * 93. Write a program to implement Insertion Sort using Array.
+ * Time Complexity:  Ω(n), θ(n^2), O(n^2).
+ * Space Complexity: O(1).
  */
 
 public class InsertionSort {
@@ -9,7 +11,7 @@ public class InsertionSort {
         while (i < arr.length) {
             int key = arr[i];
             int j = i - 1;
-            while (j >= 0 && key < arr[j]) {
+            while (j >= 0 && arr[j] > key) {
                 arr[j + 1] = arr[j];
                 j--;
             }
