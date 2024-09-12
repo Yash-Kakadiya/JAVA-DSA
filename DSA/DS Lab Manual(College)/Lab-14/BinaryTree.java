@@ -105,11 +105,52 @@ class BinaryTree {
         }
     }
 
-    void deleteNode(int key){
-        Node add=searchParent(root,key);
+    void deleteNode(int key) {
+        root = delete(root, key);
+
     }
-    Node searchParent(Node root,int key){
-        
+
+    Node delete(Node root, int key) {
+        if (root == null) {
+            System.out.println("Node of value " + key + " not found.");
+            return null;
+        }
+        if (root.info == key) {
+
+            System.out.println("Node of value " + key + " deleted successfully.");
+            return replace(root);
+        }
+        if (key < root.info) {
+            root.left = delete(root.left, key);
+        }
+        if (key > root.info) {
+            root.right = delete(root.right, key);
+        }
+        return root;
+    }
+
+    Node replace(Node root) {
+        if (root.left == null && root.right == null) {
+            return null;
+        }
+        if (root.right == null) {
+            return root.left;
+        }
+        if (root.left == null) {
+            return root.right;
+        }
+
+        Node temp = root.right;
+        if (temp.left == null) {
+            temp.left = root.left;
+        } else {
+            Node temp2 = temp;
+            while (temp2.left != null) {
+                temp2 = temp2.left;
+            }
+            temp2.left = root.left;
+        }
+        return temp;
     }
 
     public static void main(String[] args) {
@@ -117,6 +158,7 @@ class BinaryTree {
         BinaryTree bt = new BinaryTree();
 
         while (true) {
+            System.out.println("-------------------------------------");
             System.out.println("A menu driven program to implement Binary Search Tree (BST)");
             System.out.println("1.Insert Node,");
             System.out.println("2.Delete Node,");
@@ -140,7 +182,12 @@ class BinaryTree {
                     break;
                 case 3:
                     System.out.println("Enter value to be search : ");
-                    bt.search(bt.root, sc.nextInt());
+
+                    if (bt.search(bt.root, sc.nextInt())) {
+                        System.out.println("Node exist");
+                    } else {
+                        System.out.println("Node not exist");
+                    }
                     break;
                 case 4:
                     System.out.println("Preorder traversal:");
