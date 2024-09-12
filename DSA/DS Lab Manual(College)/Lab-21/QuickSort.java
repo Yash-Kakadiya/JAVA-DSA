@@ -27,7 +27,7 @@ public class QuickSort {
                     i++;
                 }
 
-                // Find element greater than the pivot on the right
+                // Find element smaller than the pivot on the right
                 while (arr[j] > pivot) {
                     j--;
                 }
