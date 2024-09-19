@@ -1,4 +1,11 @@
 
+/*
+ * 77. Write a menu driven program to implement Binary Search Tree (BST) & perform following operations 
+     Insert a node, Delete a node, Search a node.
+*78. Write a menu driven program to implement Binary Search Tree (BST) & perform following operations 
+     Preorder Traversal, Postorder Traversal, Inorder Traversal.
+*83. WAP to find the smallest and largest elements in the Binary Search Tree.
+ */
 import java.util.Scanner;
 
 class BinaryTree {
@@ -153,6 +160,20 @@ class BinaryTree {
         return temp;
     }
 
+    int smallestElement(Node root) {
+        if (root.left == null) {
+            return root.info;
+        }
+        return smallestElement(root.left);
+    }
+
+    int largestElement(Node root) {
+        if (root.right == null) {
+            return root.info;
+        }
+        return largestElement(root.right);
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         BinaryTree bt = new BinaryTree();
@@ -166,6 +187,8 @@ class BinaryTree {
             System.out.println("4.Preorder traversal.");
             System.out.println("5.Inorder traversal.");
             System.out.println("6.Postorder traversal.");
+            System.out.println("7.Smallest element.");
+            System.out.println("8.Largest element.");
             System.out.println("Enter anything else to exit!");
             System.out.println("-------------------------------------");
             System.out.println("Enter option: ");
@@ -202,6 +225,12 @@ class BinaryTree {
                 case 6:
                     System.out.println("Postorder traversal:");
                     bt.postOrder(bt.root);
+                    break;
+                case 7:
+                    System.out.println("Smallest element is :" + bt.smallestElement(bt.root));
+                    break;
+                case 8:
+                    System.out.println("Largest element is :" + bt.largestElement(bt.root));
                     break;
                 default:
                     System.out.println("Exiting ...");
